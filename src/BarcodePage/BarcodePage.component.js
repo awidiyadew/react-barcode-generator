@@ -46,22 +46,23 @@ const styles = {
   container: {
     display: 'flex',
     flex: 1,
-    width: '210mm',
+    width: '190mm',
     height: '297mm',
-    border: '1pt solid black',
-    margin: '25pt',
-    padding: '10mm'
+    border: '1pt dashed black',
+    margin: '25pt'
   },
   table: {
-    flex: 1
+    flex: 1,
+    marginTop: 15
   },
   row: {
-    height: '20mm'
+    height: '20mm',
+    maxHeight: '20mm'
   },
   grid: {
-    width: '38mm',
-    minWidth: '38mm',
-    maxWidth: '38mm',
+    width: '30mm',
+    minWidth: '30mm',
+    maxWidth: '30mm',
     paddingTop: 8
   },
   productTitle: {
