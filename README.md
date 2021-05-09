@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Barcode
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built for printing barcode for my lovely wife :)
 
 ## Available Scripts
 

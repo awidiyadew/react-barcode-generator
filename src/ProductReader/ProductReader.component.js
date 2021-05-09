@@ -14,8 +14,6 @@ class ProductReader extends React.Component {
     const rows = await readXlsxFile(file);
     const products = this._parseRows(rows);
     this.props.onProductUploaded(products);
-    console.log(JSON.stringify(products));
-    
   }
 
   _createProductPerStock(product, stock) {
