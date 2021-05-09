@@ -19,8 +19,8 @@ const BarcodePage = ({ products, pageNumber, pageCount }) => (
       >
         {products.map(renderBarcodeBox)}
       </Grid>
-      {isLastPage(pageNumber, pageCount) && <div style={styles.pageSeparator}></div>}
     </div>
+    {!isLastPage(pageNumber, pageCount) && <div style={styles.pageSeparator}></div>}
   </>
 );
 
