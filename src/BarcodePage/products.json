@@ -1,362 +1,332 @@
 [
   {
-     "id":"00258",
-     "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-     "price":"35.000"
+    "code":"00001",
+    "label":"PRODUCT 1",
+    "price":35000,
+    "stock":1
   },
   {
-    "id":"00258",
-    "label":"DTR PAYUNG BALI",
-    "price":"35.000"
- },
- {
-  "id":"00258",
-  "label":"DTR PAYUNG BALI",
-  "price":"35.000"
+    "code":"00002",
+    "label":"PRODUCT 2",
+    "price":35000,
+    "stock":2
   },
   {
-    "id":"00258",
-    "label":"DTR PAYUNG BALI",
-    "price":"35.000"
+    "code":"00002",
+    "label":"PRODUCT 2",
+    "price":35000,
+    "stock":2
   },
   {
-    "id":"00258",
-    "label":"DTR PAYUNG BALI",
-    "price":"35.000"
+    "code":"00003",
+    "label":"PRODUCT 3",
+    "price":35000,
+    "stock":3
   },
   {
-    "id":"00258",
-    "label":"DTR PAYUNG BALI",
-    "price":"35.000"
+    "code":"00003",
+    "label":"PRODUCT 3",
+    "price":35000,
+    "stock":3
   },
   {
-    "id":"00258",
-    "label":"DTR PAYUNG BALI",
-    "price":"35.000"
- },
- {
-   "id":"00258",
-   "label":"DTR PAYUNG BALI",
-   "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
- },
- {
-   "id":"00258",
-   "label":"DTR PAYUNG BALI",
-   "price":"35.000"
- },
- {
-  "id":"00258",
-  "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-  "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-  "id":"00258",
-  "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-  "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-  "id":"00258",
-  "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-  "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-  "id":"00258",
-  "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-  "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-  "id":"00258",
-  "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-  "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-  "id":"00258",
-  "label":"DTR PAYUNG BALI DTR XXL XXL XXL",
-  "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
- "id":"00258",
- "label":"DTR PAYUNG BALI",
- "price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-"id":"00258",
-"label":"DTR PAYUNG BALI",
-"price":"35.000"
-},
-{
-  "id":"xxxxx",
-  "label":"DTR PAYUNG BALI PAGE 2",
-  "price":"35.000"
+    "code":"00003",
+    "label":"PRODUCT 3",
+    "price":35000,
+    "stock":3
   },
   {
-  "id":"yyyyy",
-  "label":"PAGE 2 PAGE 2",
-  "price":"35.000"
+    "code":"00004",
+    "label":"PRODUCT 4",
+    "price":35000,
+    "stock":4
+  },
+  {
+    "code":"00004",
+    "label":"PRODUCT 4",
+    "price":35000,
+    "stock":4
+  },
+  {
+    "code":"00004",
+    "label":"PRODUCT 4",
+    "price":35000,
+    "stock":4
+  },
+  {
+    "code":"00004",
+    "label":"PRODUCT 4",
+    "price":35000,
+    "stock":4
+  },
+  {
+    "code":"00005",
+    "label":"PRODUCT 5",
+    "price":35000,
+    "stock":5
+  },
+  {
+    "code":"00005",
+    "label":"PRODUCT 5",
+    "price":35000,
+    "stock":5
+  },
+  {
+    "code":"00005",
+    "label":"PRODUCT 5",
+    "price":35000,
+    "stock":5
+  },
+  {
+    "code":"00005",
+    "label":"PRODUCT 5",
+    "price":35000,
+    "stock":5
+  },
+  {
+    "code":"00005",
+    "label":"PRODUCT 5",
+    "price":35000,
+    "stock":5
+  },
+  {
+    "code":"00006",
+    "label":"PRODUCT 6",
+    "price":35000,
+    "stock":6
+  },
+  {
+    "code":"00006",
+    "label":"PRODUCT 6",
+    "price":35000,
+    "stock":6
+  },
+  {
+    "code":"00006",
+    "label":"PRODUCT 6",
+    "price":35000,
+    "stock":6
+  },
+  {
+    "code":"00006",
+    "label":"PRODUCT 6",
+    "price":35000,
+    "stock":6
+  },
+  {
+    "code":"00006",
+    "label":"PRODUCT 6",
+    "price":35000,
+    "stock":6
+  },
+  {
+    "code":"00006",
+    "label":"PRODUCT 6",
+    "price":35000,
+    "stock":6
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00007",
+    "label":"PRODUCT 7",
+    "price":35000,
+    "stock":7
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00008",
+    "label":"PRODUCT 8",
+    "price":35000,
+    "stock":8
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00009",
+    "label":"PRODUCT 9",
+    "price":35000,
+    "stock":9
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
+  },
+  {
+    "code":"00010",
+    "label":"PRODUCT 10",
+    "price":35000,
+    "stock":10
   }
 ]

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import chunk from 'lodash/chunk';
 
 import { BarcodePage } from './BarcodePage';
-import productSeeds from '../src/BarcodePage/products.json';
+import { ProductReader } from '../src/ProductReader';
 
 const BARCODE_COUNT_PERPAGE = 70;
 
@@ -11,6 +11,7 @@ const renderBarcodePages = (products) => {
   const pageCount = chunkedProducts.length;
   return chunkedProducts.map((chunkOfProducts, index) => (
     <BarcodePage 
+      key={`${index}`}
       products={chunkOfProducts} 
       pageNumber={index + 1}
       pageCount={pageCount}
@@ -18,10 +19,22 @@ const renderBarcodePages = (products) => {
   ));
 };
 
-const App = () => (
-  <div>
-    {renderBarcodePages(productSeeds)}
-  </div>
-);
+const App = () => {
+  const [products, setProducts] = useState([]);
+  const [showProductReader, setShowProductReader] = useState(true);
+  return (
+    <div>
+      {showProductReader && 
+        <ProductReader 
+          onProductUploaded={(products) => {
+            setProducts(products);
+            setShowProductReader(false);
+          }} 
+        />
+      }
+      {renderBarcodePages(products)}
+    </div>
+  );
+};
 
 export default App;

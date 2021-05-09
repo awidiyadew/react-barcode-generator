@@ -5,11 +5,11 @@ const Barcode = ({ product }) => (
     <div style={styles.productTitle}>{product.label}</div>
     <div style={styles.productPrice}>{`Rp${product.price}`}</div>
     <ReactBarcode 
-      value={product.id}
+      value={product.code}
       width={0.9}
       height={25}
       format="CODE128"
-      fontSize="10"
+      fontSize={10}
     />
   </div>
 );

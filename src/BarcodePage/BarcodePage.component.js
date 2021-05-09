@@ -26,8 +26,9 @@ const BarcodePage = ({ products, pageNumber, pageCount }) => (
 
 const isLastPage = (pageNumber, pageCount) => pageNumber === pageCount;
 
-const renderBarcodeBox = (product) => (
+const renderBarcodeBox = (product, index) => (
   <Box
+    key={`${index}`}
     direction="row"
     border={styles.boxBorder}
   >
