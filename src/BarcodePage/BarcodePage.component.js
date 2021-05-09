@@ -1,9 +1,10 @@
 import React from 'react';
-import products from './products.json';
+import products1 from './products.json';
+import products2 from './data.json';
 import Barcode from 'react-barcode';
 import './BarcodePage.css'
 
-const renderRow = () => (
+const renderRow = (products) => (
   <tr style={styles.row}>
     {
       products.map(product => (
@@ -12,8 +13,8 @@ const renderRow = () => (
           <div style={styles.productPrice}>{`Rp${product.price}`}</div>
           <Barcode 
             value={product.id}
-            width={1.3}
-            height={30}
+            width={1}
+            height={20}
             format="CODE128"
             fontSize="12"
           />
@@ -24,19 +25,17 @@ const renderRow = () => (
 );
 
 const BarcodePage = () => (
-  <div style={styles.container}>
+  <div id="barcode-page" style={styles.container}>
     <table style={styles.table}>
     <tbody>
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
-      {renderRow()}
+      {renderRow(products1)}
+      {renderRow(products1)}
+      {renderRow(products1)}
+      {renderRow(products1)}
+      {renderRow(products2)}
+      {renderRow(products2)}
+      {renderRow(products2)}
+      {renderRow(products2)}
     </tbody>
     </table>
   </div>
@@ -46,24 +45,21 @@ const styles = {
   container: {
     display: 'flex',
     flex: 1,
-    width: '190mm',
-    height: '297mm',
-    border: '1pt dashed black',
+    height: '190mm',
+    width: '297mm',
     margin: '25pt'
   },
   table: {
     flex: 1,
-    marginTop: 15
+    margin: 15
   },
   row: {
-    height: '20mm',
-    maxHeight: '20mm'
+    height: '28mm'
   },
   grid: {
     width: '30mm',
     minWidth: '30mm',
-    maxWidth: '30mm',
-    paddingTop: 8
+    maxWidth: '30mm'
   },
   productTitle: {
     fontSize: '8pt',

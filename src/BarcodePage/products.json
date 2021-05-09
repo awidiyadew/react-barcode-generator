@@ -1,27 +1,57 @@
 [
   {
-     "id":"00001",
-     "label":"Celana Rayon",
-     "price":35000
+     "id":"00258",
+     "label":"DTR PAYUNG BALI",
+     "price":"35.000"
   },
   {
-     "id":"00002",
-     "label":"SET CELANA PDK XXL",
-     "price":35000
+    "id":"00258",
+    "label":"DTR PAYUNG BALI",
+    "price":"35.000"
+ },
+ {
+  "id":"00258",
+  "label":"DTR PAYUNG BALI",
+  "price":"35.000"
   },
   {
-     "id":"00003",
-     "label":"Celana Rayon",
-     "price":35000
+    "id":"00258",
+    "label":"DTR PAYUNG BALI",
+    "price":"35.000"
   },
   {
-     "id":"00004",
-     "label":"Celana Rayon",
-     "price":35000
+    "id":"00258",
+    "label":"DTR PAYUNG BALI",
+    "price":"35.000"
   },
   {
-     "id":"00005",
-     "label":"Celana Rayon",
-     "price":35000
-  }
+    "id":"00258",
+    "label":"DTR PAYUNG BALI",
+    "price":"35.000"
+  },
+  {
+    "id":"00258",
+    "label":"DTR PAYUNG BALI",
+    "price":"35.000"
+ },
+ {
+   "id":"00258",
+   "label":"DTR PAYUNG BALI",
+   "price":"35.000"
+},
+{
+ "id":"00258",
+ "label":"DTR PAYUNG BALI",
+ "price":"35.000"
+ },
+ {
+   "id":"00258",
+   "label":"DTR PAYUNG BALI",
+   "price":"35.000"
+ },
+ {
+   "id":"00258",
+   "label":"DTR PAYUNG BALI",
+   "price":"35.000"
+ }  
 ]
