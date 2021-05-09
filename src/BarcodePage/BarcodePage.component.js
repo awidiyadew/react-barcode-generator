@@ -1,45 +1,41 @@
 import React from 'react';
-import products1 from './products.json';
-import products2 from './data.json';
-import Barcode from 'react-barcode';
-import './BarcodePage.css'
+import { Grid, Box } from 'grommet';
 
-const renderRow = (products) => (
-  <tr style={styles.row}>
-    {
-      products.map(product => (
-        <td style={styles.grid}>
-          <div style={styles.productTitle}>{product.label}</div>
-          <div style={styles.productPrice}>{`Rp${product.price}`}</div>
-          <Barcode 
-            value={product.id}
-            width={1}
-            height={20}
-            format="CODE128"
-            fontSize="12"
-          />
-        </td>
-      ))
-    }
-  </tr>
+import { Barcode } from '../Barcode';
+
+const COLUMN_COUNT = 10;
+const ROW_COUNT = 7;
+
+/**
+ * 10x7 barcode grid in A4 page
+ */
+const BarcodePage = ({ products, pageNumber, pageCount }) => (
+  <>
+    <div style={styles.container}>
+      <Grid
+        columns={repeatSize('xsmall', COLUMN_COUNT)}
+        rows={repeatSize('xsmall', ROW_COUNT)}
+        gap="small"
+      >
+        {products.map(renderBarcodeBox)}
+      </Grid>
+      {isLastPage(pageNumber, pageCount) && <div style={styles.pageSeparator}></div>}
+    </div>
+  </>
 );
 
-const BarcodePage = () => (
-  <div id="barcode-page" style={styles.container}>
-    <table style={styles.table}>
-    <tbody>
-      {renderRow(products1)}
-      {renderRow(products1)}
-      {renderRow(products1)}
-      {renderRow(products1)}
-      {renderRow(products2)}
-      {renderRow(products2)}
-      {renderRow(products2)}
-      {renderRow(products2)}
-    </tbody>
-    </table>
-  </div>
+const isLastPage = (pageNumber, pageCount) => pageNumber === pageCount;
+
+const renderBarcodeBox = (product) => (
+  <Box
+    direction="row"
+    border={styles.boxBorder}
+  >
+    {!!product && <Barcode product={product} />}
+  </Box>
 );
+
+const repeatSize = (size, length) => new Array(length).fill(size);
 
 const styles = {
   container: {
@@ -49,18 +45,6 @@ const styles = {
     width: '297mm',
     margin: '25pt'
   },
-  table: {
-    flex: 1,
-    margin: 15
-  },
-  row: {
-    height: '28mm'
-  },
-  grid: {
-    width: '30mm',
-    minWidth: '30mm',
-    maxWidth: '30mm'
-  },
   productTitle: {
     fontSize: '8pt',
     textTransform: 'uppercase'
@@ -68,10 +52,16 @@ const styles = {
   productPrice: {
     fontSize: '10pt',
     fontWeight: 'bold'
+  },
+  boxBorder: {
+    color: "border",
+    size: "xsmall",
+    style: "dashed",
+    side: "horizontal"
+  },
+  pageSeparator: { 
+    height: 35
   }
 };
-
-// width: '38mm',
-// height: '15mm'
 
 export default BarcodePage;
