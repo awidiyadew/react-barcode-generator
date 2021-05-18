@@ -24,11 +24,11 @@ class ProductReader extends React.Component {
   _parseRows(rows) {
     const [, ...productRows] = rows;
     return productRows.reduce((products, row) => {
-      const stock = row[2];
+      const stock = row[3];
       const product = {
         code: row[0],
         label: row[1],
-        price: row[3],
+        price: row[2],
         stock
       };
       return [...products, ...this._createProductPerStock(product, stock)];
