@@ -1,41 +1,41 @@
 import React from 'react';
-import { Grid, Box } from 'grommet';
+import chunk from 'lodash/chunk';
 
 import { Barcode } from '../Barcode';
 import priceTagImage from './pricetag.png';
 
-const COLUMN_COUNT = 3;
-const ROW_COUNT = 7;
+const ROW_COUNT = 8;
 
-/**
- * 10x7 barcode grid in A4 page
- */
-const BarcodePage = ({ products, pageNumber, pageCount }) => (
-  <>
+const BarcodePage = ({ products }) => {
+  const chunkedColumn = chunk(products, ROW_COUNT);
+  return (
     <div style={styles.container}>
-        {products.map(renderBarcodeBox)}
+      {chunkedColumn.map((aChunk, index) => (
+        <div key={`${index}`} style={styles.column}>
+          {aChunk.map(renderBarcodeBox)}
+        </div>
+      ))}
     </div>
-    {!isLastPage(pageNumber, pageCount) && <div style={styles.pageSeparator}></div>}
-  </>
-);
-
-const isLastPage = (pageNumber, pageCount) => pageNumber === pageCount;
+  );
+};
 
 const renderBarcodeBox = (product, index) => (
-  <div style={styles.image}>
-    {!!product && <Barcode product={product} />}
+  <div style={styles.box} key={`${index}`}>
+    <img style={styles.image} src={priceTagImage} alt="priceTag"/>
+    {!!product && <Barcode containerStyle={styles.barcode} product={product} />}
   </div>
 );
-
-const repeatSize = (size, length) => new Array(length).fill(size);
 
 const styles = {
   container: {
     display: 'flex',
-    flex: 1,
-    width: '190mm',
+    flex: 3,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    boxSizing: 'border-box',
+    width: '210mm',
     height: '297mm',
-    margin: '25pt'
+    padding: '25pt'
   },
   productTitle: {
     fontSize: '8pt',
@@ -45,23 +45,26 @@ const styles = {
     fontSize: '10pt',
     fontWeight: 'bold'
   },
-  boxBorder: {
-    color: "border",
-    size: "xsmall",
-    style: "dashed",
-    side: "horizontal"
-  },
   pageSeparator: { 
     height: 35
   },
-  image: {
+  box: {
+    border: '1pt dashed black',
     display: 'flex',
-    justifyContent: 'flex-end',
-    alignContent: 'flex-end',
-    paddingRight: 8,
-    width: 300,
-    backgroundSize: 'contain',
-    backgroundImage: `url(${priceTagImage})`
+    flex: 1,
+    padding: 3
+  },
+  column: {
+    flex: 1
+  },
+  image: {
+    width: 230
+  },
+  barcode: {
+    position: 'absolute',
+    width: 115,
+    marginTop: 32,
+    marginLeft: 115
   }
 };
 
