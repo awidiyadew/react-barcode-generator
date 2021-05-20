@@ -2,8 +2,9 @@ import React from 'react';
 import { Grid, Box } from 'grommet';
 
 import { Barcode } from '../Barcode';
+import priceTagImage from './pricetag.png';
 
-const COLUMN_COUNT = 10;
+const COLUMN_COUNT = 3;
 const ROW_COUNT = 7;
 
 /**
@@ -12,13 +13,7 @@ const ROW_COUNT = 7;
 const BarcodePage = ({ products, pageNumber, pageCount }) => (
   <>
     <div style={styles.container}>
-      <Grid
-        columns={repeatSize('xsmall', COLUMN_COUNT)}
-        rows={repeatSize('xsmall', ROW_COUNT)}
-        gap="small"
-      >
         {products.map(renderBarcodeBox)}
-      </Grid>
     </div>
     {!isLastPage(pageNumber, pageCount) && <div style={styles.pageSeparator}></div>}
   </>
@@ -27,13 +22,9 @@ const BarcodePage = ({ products, pageNumber, pageCount }) => (
 const isLastPage = (pageNumber, pageCount) => pageNumber === pageCount;
 
 const renderBarcodeBox = (product, index) => (
-  <Box
-    key={`${index}`}
-    direction="row"
-    border={styles.boxBorder}
-  >
+  <div style={styles.image}>
     {!!product && <Barcode product={product} />}
-  </Box>
+  </div>
 );
 
 const repeatSize = (size, length) => new Array(length).fill(size);
@@ -42,8 +33,8 @@ const styles = {
   container: {
     display: 'flex',
     flex: 1,
-    height: '190mm',
-    width: '297mm',
+    width: '190mm',
+    height: '297mm',
     margin: '25pt'
   },
   productTitle: {
@@ -62,6 +53,15 @@ const styles = {
   },
   pageSeparator: { 
     height: 35
+  },
+  image: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignContent: 'flex-end',
+    paddingRight: 8,
+    width: 300,
+    backgroundSize: 'contain',
+    backgroundImage: `url(${priceTagImage})`
   }
 };
 
