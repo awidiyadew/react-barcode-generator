@@ -26,7 +26,7 @@ const Barcode = ({ product, containerStyle }) => (
     <div style={styles.productTitle}>{sliceTitle(product.label)}</div>
     <div style={styles.productPrice}>{`${convertToRupiah(product.price)}`}</div>
     <ReactBarcode
-      value={'00001'}
+      value={product.code}
       width={1.2}
       height={25}
       format="CODE128"
