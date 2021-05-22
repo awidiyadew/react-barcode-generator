@@ -1,6 +1,8 @@
 import { Form, Input, Button, Card, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
+import parseExcelUpload from '../Utils/parseExcelUpload';
+
 const layout = {
   labelCol: {
     span: 4,
@@ -17,11 +19,7 @@ const tailLayout = {
   },
 };
 
-const getValueFromEvent = (event) => {
-  console.log('event', event);
-};
-
-const ProductForm = ({ onProductSubmit }) => {
+const ProductForm = ({ onProductSubmit, onExcelParsed }) => {
   const [form] = Form.useForm();
 
   const renderInput = (formItemProps, inputProps) => (
@@ -33,11 +31,16 @@ const ProductForm = ({ onProductSubmit }) => {
     </Form.Item>
   );
 
+  const getValueFromEvent = async (event) => {
+    const products = await parseExcelUpload(event);
+    onExcelParsed(products);
+  };
+
   const renderUploadButton = () => (
     <Form.Item
       name="upload"
       label="Upload excel"
-      valuePropName="fileList"
+      valuePropName="upload"
       getValueFromEvent={getValueFromEvent}
     >
       <Upload name="logo" action="/upload.do" listType="text">

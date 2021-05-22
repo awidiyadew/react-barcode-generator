@@ -49,6 +49,7 @@ const App = () => {
       onClickBarcode={() => {
         setOutputMode(OUTPUT_MODE.BARCODE);
       }}
+      onExcelParsed={setProducts}
     />
   );
 

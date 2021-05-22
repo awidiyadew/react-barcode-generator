@@ -7,7 +7,7 @@ import ProductList from '../ProductList/ProductList.component';
 const { Header, Content } = Layout;
 
 const Home = (props) => {
-  const { addProduct, products, onClickPriceTag, onClickBarcode } = props;
+  const { addProduct, products, onClickPriceTag, onClickBarcode, onExcelParsed } = props;
   const hasProduct = products.length > 0;
   return (
     <Layout>
@@ -18,7 +18,7 @@ const Home = (props) => {
       </Header>
       <Content className="site-layout" style={{ background: '#fff', padding: '50px 50px', marginTop: 64 }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 500 }}>
-          <ProductForm onProductSubmit={addProduct} />
+          <ProductForm onProductSubmit={addProduct} onExcelParsed={onExcelParsed} />
           <br />
           <ProductList products={products} />
           <br />
