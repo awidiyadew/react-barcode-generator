@@ -18,8 +18,8 @@ const columns = [
   },
   {
     title: 'Qty',
-    dataIndex: 'qty',
-    key: 'qty'
+    dataIndex: 'stock',
+    key: 'stock'
   }
 ];
 

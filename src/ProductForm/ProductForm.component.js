@@ -57,12 +57,10 @@ const ProductForm = ({ onProductSubmit }) => {
         {renderInput({ name: 'code', label: 'Code' })}
         {renderInput({ name: 'label', label: 'Product Label' })}
         {renderInput({ name: 'price', label: 'Price' }, { prefix: 'Rp', type: 'number', min: 0, step: 1000 })}
-        {renderInput({ name: 'qty', label: 'Qty' }, { type: 'number', min: 0 })}
+        {renderInput({ name: 'stock', label: 'Qty' }, { type: 'number', min: 0 })}
         {renderUploadButton()}
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
-            Add Product
-          </Button>
+          <Button type="primary" htmlType="submit">Add Product</Button>
         </Form.Item>
       </Form>
     </Card>
