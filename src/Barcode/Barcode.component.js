@@ -1,5 +1,7 @@
 import ReactBarcode from 'react-barcode';
 
+const MAX_TITLE_LENGTH = 35;
+
 const convertToRupiah = (value) => {
 	let convertedDigit = '';		
 	const reversedValue = value.toString().split('').reverse().join('');
@@ -12,13 +14,20 @@ const convertToRupiah = (value) => {
 	return `Rp${normalizedValue}`;
 }
 
-const Barcode = ({ product }) => (
-  <div style={styles.container}>
-    <div style={styles.productTitle}>{product.label}</div>
+const sliceTitle = title => {
+  if (title.length > MAX_TITLE_LENGTH) {
+    return `${[...title].slice(0, 32).join('')}...`;
+  }
+  return title;
+}
+
+const Barcode = ({ product, containerStyle }) => (
+  <div style={containerStyle}>
+    <div style={styles.productTitle}>{sliceTitle(product.label)}</div>
     <div style={styles.productPrice}>{`${convertToRupiah(product.price)}`}</div>
-    <ReactBarcode 
+    <ReactBarcode
       value={product.code}
-      width={0.9}
+      width={1.2}
       height={25}
       format="CODE128"
       fontSize={10}
@@ -27,16 +36,14 @@ const Barcode = ({ product }) => (
 );
 
 const styles = {
-  container: {
-    paddingTop: 3
-  },
   productTitle: {
     fontSize: '7pt',
     textTransform: 'uppercase',
-    textAlign: 'center'
+    textAlign: 'center',
+    maxHeight:  50
   },
   productPrice: {
-    fontSize: '10pt',
+    fontSize: '9pt',
     fontWeight: 'bold',
     textAlign: 'center'
   }

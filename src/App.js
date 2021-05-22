@@ -4,7 +4,7 @@ import chunk from 'lodash/chunk';
 import { BarcodePage } from './BarcodePage';
 import { ProductReader } from '../src/ProductReader';
 
-const BARCODE_COUNT_PERPAGE = 70;
+const BARCODE_COUNT_PERPAGE = 24;
 
 const renderBarcodePages = (products) => {
   const chunkedProducts = chunk(products, BARCODE_COUNT_PERPAGE);
