@@ -49,9 +49,9 @@ const styles = {
     height: 35
   },
   box: {
-    border: '1pt dashed black',
-    display: 'flex',
-    flex: 1,
+    display: 'grid',
+    border: '0.2pt dashed black',
+    boxSizing: 'border-box',
     padding: 3
   },
   column: {
