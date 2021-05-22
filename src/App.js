@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import chunk from 'lodash/chunk';
 
 import { BarcodePage } from './BarcodePage';
-import { ProductReader } from '../src/ProductReader';
+import { Home } from '../src/Home';
 
 const BARCODE_COUNT_PERPAGE = 24;
 
@@ -21,19 +21,18 @@ const renderBarcodePages = (products) => {
 
 const App = () => {
   const [products, setProducts] = useState([]);
-  const [showProductReader, setShowProductReader] = useState(true);
+
+  const addProduct = (product) => {
+    setProducts([...products, product]);
+  };
+
+  console.log('products', products);
+
   return (
-    <div>
-      {showProductReader && 
-        <ProductReader 
-          onProductUploaded={(products) => {
-            setProducts(products);
-            setShowProductReader(false);
-          }} 
-        />
-      }
-      {renderBarcodePages(products)}
-    </div>
+    <Home 
+      products={products}
+      addProduct={addProduct} 
+    />
   );
 };
 
