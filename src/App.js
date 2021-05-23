@@ -6,19 +6,22 @@ import { Home } from '../src/Home';
 
 const BARCODE_COUNT_PERPAGE = 24;
 
-const renderPriceTagPages = (products) => {
+const chunkProduct = (products) => {
   const multipliedProducts = products.reduce((acc, product) => {
     const productByStock = createProductPerStock(product, product.stock);
     return [...acc, ...productByStock];
   }, []);
-  const chunkedProducts = chunk(multipliedProducts, BARCODE_COUNT_PERPAGE);
-  const pageCount = chunkedProducts.length;
+  return chunk(multipliedProducts, BARCODE_COUNT_PERPAGE);
+};
+
+const renderPriceTagPages = (products) => {
+  const chunkedProducts = chunkProduct(products);
   return chunkedProducts.map((chunkOfProducts, index) => (
     <PriceTagPage
       key={`${index}`}
       products={chunkOfProducts} 
       pageNumber={index + 1}
-      pageCount={pageCount}
+      pageCount={chunkedProducts.length}
     />
   ));
 };
@@ -43,12 +46,8 @@ const App = () => {
     <Home
       products={products}
       addProduct={addProduct} 
-      onClickPriceTag={() => {
-        setOutputMode(OUTPUT_MODE.PRICE_TAG);
-      }}
-      onClickBarcode={() => {
-        setOutputMode(OUTPUT_MODE.BARCODE);
-      }}
+      onClickPriceTag={() => setOutputMode(OUTPUT_MODE.PRICE_TAG)}
+      onClickBarcode={() => setOutputMode(OUTPUT_MODE.BARCODE)}
       onExcelParsed={setProducts}
     />
   );
