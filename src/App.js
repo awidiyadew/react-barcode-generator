@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import chunk from 'lodash/chunk';
 
-import { BarcodePage } from './BarcodePage';
+import { PriceTagPage } from './PriceTagPage';
 import { Home } from '../src/Home';
 
 const BARCODE_COUNT_PERPAGE = 24;
 
-const renderBarcodePages = (products) => {
+const renderPriceTagPages = (products) => {
   const multipliedProducts = products.reduce((acc, product) => {
     const productByStock = createProductPerStock(product, product.stock);
     return [...acc, ...productByStock];
@@ -14,7 +14,7 @@ const renderBarcodePages = (products) => {
   const chunkedProducts = chunk(multipliedProducts, BARCODE_COUNT_PERPAGE);
   const pageCount = chunkedProducts.length;
   return chunkedProducts.map((chunkOfProducts, index) => (
-    <BarcodePage 
+    <PriceTagPage
       key={`${index}`}
       products={chunkOfProducts} 
       pageNumber={index + 1}
@@ -53,7 +53,7 @@ const App = () => {
     />
   );
 
-  return !outputMode ? renderHomeApp() : renderBarcodePages(products);
+  return !outputMode ? renderHomeApp() : renderPriceTagPages(products);
 };
 
 export default App;
