@@ -3,6 +3,8 @@ import chunk from 'lodash/chunk';
 
 import { PriceTagPage } from './PriceTagPage';
 import { Home } from '../src/Home';
+import data from './products.json';
+import { StickerLabelPage } from './StickerLabelPage';
 
 const BARCODE_COUNT_PERPAGE = 24;
 
@@ -26,6 +28,18 @@ const renderPriceTagPages = (products) => {
   ));
 };
 
+const renderStickerLabelPages = (products) => {
+  const chunkedProducts = chunkProduct(products);
+  return chunkedProducts.map((chunkOfProducts, index) => (
+    <StickerLabelPage
+      key={`${index}`}
+      products={chunkOfProducts} 
+      pageNumber={index + 1}
+      pageCount={chunkedProducts.length}
+    />
+  ));
+};
+
 const OUTPUT_MODE = {
   PRICE_TAG: 'PRICE_TAG',
   BARCODE: 'BARCODE'
@@ -35,8 +49,8 @@ const createProductPerStock = (product, stock) => new Array(Number(stock)).fill(
 .map(() => product);
 
 const App = () => {
-  const [products, setProducts] = useState([]);
-  const [outputMode, setOutputMode] = useState(null);
+  const [products, setProducts] = useState(data);
+  const [outputMode, setOutputMode] = useState(OUTPUT_MODE.BARCODE);
 
   const addProduct = (product) => {
     setProducts([...products, product]);
@@ -52,7 +66,13 @@ const App = () => {
     />
   );
 
-  return !outputMode ? renderHomeApp() : renderPriceTagPages(products);
+  return (
+    <>
+      {!!outputMode || renderHomeApp()}
+      {outputMode === OUTPUT_MODE.PRICE_TAG && renderPriceTagPages(products)}
+      {outputMode === OUTPUT_MODE.BARCODE && renderStickerLabelPages(products)}
+    </>
+  );
 };
 
 export default App;
