@@ -28,22 +28,22 @@ const Barcode = ({ product, containerStyle }) => (
     <ReactBarcode
       value={product.code}
       width={1.2}
-      height={25}
+      height={22}
       format="CODE128"
-      fontSize={10}
+      fontSize={8}
     />
   </div>
 );
 
 const styles = {
   productTitle: {
-    fontSize: '7pt',
+    fontSize: '6pt',
     textTransform: 'uppercase',
     textAlign: 'center',
     maxHeight:  50
   },
   productPrice: {
-    fontSize: '9pt',
+    fontSize: '8pt',
     fontWeight: 'bold',
     textAlign: 'center'
   }
