@@ -6,7 +6,7 @@ import { Home } from '../src/Home';
 import data from './products.json';
 import { StickerLabelPage } from './StickerLabelPage';
 
-const BARCODE_COUNT_PERPAGE = 24;
+const BARCODE_COUNT_PERPAGE = 30;
 
 const chunkProduct = (products) => {
   const multipliedProducts = products.reduce((acc, product) => {

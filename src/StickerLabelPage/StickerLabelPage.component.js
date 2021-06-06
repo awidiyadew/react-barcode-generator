@@ -1,42 +1,37 @@
 import React from 'react';
+import chunk from 'lodash/chunk';
 
 import { Barcode } from '../Barcode';
 
+const BARCODE_COUNT_PERPAGE = 30;
+
 const PriceTagPage = ({ products }) => {
+  const missingLength = BARCODE_COUNT_PERPAGE - products.length;
+  const mappedList = [...products, ...(new Array(missingLength).fill(null))]
+  const chunked = chunk(mappedList, 5);
   return (
     <div style={styles.container}>
       <div style={styles.innerContainer}>
-        {renderRow()}
-        {renderRow()}
-        {renderRow()}
-        {renderRow()}
-        {renderRow()}
-        {renderRow()}
+        {
+          chunked.map(chunk => renderRow(chunk))
+        }
       </div>
     </div>
   );
 };
 
-const renderRow = () => (
+const renderRow = (items) => (
   <div style={styles.row}>
-    {renderPricetagItem(0)}
-    {renderPricetagItem(1)}
-    {renderPricetagItem(2)}
-    {renderPricetagItem(3)}
-    {renderPricetagItem(4)}
+    {
+      items.map((it, index) => renderPricetagItem(it, index))
+    }
   </div>
 );
 
-const product = {
-  label: 'Jumsuit Jojon Jumsuit Jojon',
-  price: 12000,
-  code: '00001'
-}
-
-const renderPricetagItem = (index) => (
-  <div style={styles.box} key={`${index}`}>
+const renderPricetagItem = (item, index) => (
+  <div style={item ? styles.boxBorder : styles.box} key={`${index}`}>
     <div id="barcode-container" style={styles.barcodeContainer}>
-      <Barcode containerStyle={styles.barcode} product={product} />
+      {!!item && <Barcode containerStyle={styles.barcode} product={item} />}
     </div>
   </div>
 );
@@ -58,6 +53,17 @@ const styles = {
     height: '100%'
   },
   box: {
+    flexDirection: 'column',
+    flex: 1,
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    width: '37mm',
+    maxWidth: '37mm',
+    height: '24mm',
+    padding: 3
+  },
+  boxBorder: {
     flexDirection: 'column',
     flex: 1,
     justifyContent: 'center',
