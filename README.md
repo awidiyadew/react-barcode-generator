@@ -1,6 +1,6 @@
 # Getting Started with Barcode
 
-This project was built for printing barcode for my lovely wife :)
+This project was built for printing barcode for my lovely wife [@MaliniCollection](https://www.google.com/maps/place/Malini+Collection/@-6.4016626,106.8081964,15z/data=!4m5!3m4!1s0x0:0x9d19f62df8c7115f!8m2!3d-6.4016626!4d106.8081964) :)
 
 ## Available Scripts
 
