@@ -6,20 +6,20 @@ import priceTagImage from './pricetag.png';
 
 const ROW_COUNT = 8;
 
-const BarcodePage = ({ products }) => {
+const PriceTagPage = ({ products }) => {
   const chunkedColumn = chunk(products, ROW_COUNT);
   return (
     <div style={styles.container}>
       {chunkedColumn.map((aChunk, index) => (
         <div key={`${index}`} style={styles.column}>
-          {aChunk.map(renderBarcodeBox)}
+          {aChunk.map(renderPricetagItem)}
         </div>
       ))}
     </div>
   );
 };
 
-const renderBarcodeBox = (product, index) => (
+const renderPricetagItem = (product, index) => (
   <div style={styles.box} key={`${index}`}>
     <img style={styles.image} src={priceTagImage} alt="priceTag"/>
     {!!product && <Barcode containerStyle={styles.barcode} product={product} />}
@@ -68,4 +68,4 @@ const styles = {
   }
 };
 
-export default BarcodePage;
+export default PriceTagPage;
