@@ -3,7 +3,6 @@ import chunk from 'lodash/chunk';
 
 import { PriceTagPage } from './PriceTagPage';
 import { Home } from '../src/Home';
-import data from './products.json';
 import { StickerLabelPage } from './StickerLabelPage';
 
 const BARCODE_COUNT_PERPAGE = 24;
@@ -48,13 +47,12 @@ const OUTPUT_MODE = {
 const createProductPerStock = (product, stock) => new Array(Number(stock)).fill(null)
 .map(() => product);
 
-const App = () => {
-  const [products, setProducts] = useState(data);
-  const [outputMode, setOutputMode] = useState(OUTPUT_MODE.BARCODE);
-
-  const addProduct = (product) => {
-    setProducts([...products, product]);
-  };
+const App = ({ 
+  products,
+  addProduct,
+  overWriteProducts 
+}) => {
+  const [outputMode, setOutputMode] = useState(null);
 
   const renderHomeApp = () => (
     <Home
@@ -62,7 +60,7 @@ const App = () => {
       addProduct={addProduct} 
       onClickPriceTag={() => setOutputMode(OUTPUT_MODE.PRICE_TAG)}
       onClickBarcode={() => setOutputMode(OUTPUT_MODE.BARCODE)}
-      onExcelParsed={setProducts}
+      onExcelParsed={overWriteProducts}
     />
   );
 
