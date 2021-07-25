@@ -1,4 +1,4 @@
-import { Form, Input, Button, Card, Upload } from 'antd';
+import { Form, Input, Button, Card, Upload, Space } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
 import parseExcelUpload from '../Utils/parseExcelUpload';
@@ -19,7 +19,7 @@ const tailLayout = {
   },
 };
 
-const ProductForm = ({ onProductSubmit, onExcelParsed }) => {
+const ProductForm = ({ onProductSubmit, onExcelParsed, onProductReset }) => {
   const [form] = Form.useForm();
 
   const renderInput = (formItemProps, inputProps) => (
@@ -63,7 +63,10 @@ const ProductForm = ({ onProductSubmit, onExcelParsed }) => {
         {renderInput({ name: 'stock', label: 'Qty' }, { type: 'number', min: 0 })}
         {renderUploadButton()}
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">Add Product</Button>
+          <Space>
+            <Button type="primary" htmlType="submit">Add Product</Button>
+            <Button danger type="primary" onClick={onProductReset}>Reset Products</Button>
+          </Space>
         </Form.Item>
       </Form>
     </Card>

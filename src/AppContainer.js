@@ -17,11 +17,24 @@ const AppContainer = () => {
     storageService.overwriteProducts(products);
   };
 
+  const deleteProduct = (product) => {
+    const newProducts = products.filter(item => item.code !== product.code);
+    setProducts(newProducts);
+    storageService.overwriteProducts(newProducts);
+  };
+
+  const resetProduct = () => {
+    setProducts([]);
+    storageService.overwriteProducts([]);
+  };
+
   return (
     <App
       products={products}
       addProduct={addProduct}
       overWriteProducts={overWriteProducts}
+      deleteProduct={deleteProduct}
+      resetProduct={resetProduct}
     />
   );
 };

@@ -1,4 +1,6 @@
-import { Table } from 'antd';
+import { Table, Button } from 'antd';
+
+const { Column } = Table;
 
 const columns = [
   {
@@ -23,8 +25,21 @@ const columns = [
   }
 ];
 
-const ProductList = ({ products }) => (
-  <Table columns={columns} dataSource={products} />
+const ProductList = ({ products, deleteProduct }) => (
+  <Table dataSource={products}>
+    {columns.map(column => (
+      <Column title={column.title} dataIndex={column.dataIndex} key={column.key} />
+    ))}
+    <Column
+      title="Action"
+      key="action"
+      render={(_, product) => (
+        <Button danger onClick={() => deleteProduct(product)}>
+          Delete
+        </Button>
+      )}
+    />
+  </Table>
 );
 
 export default ProductList;

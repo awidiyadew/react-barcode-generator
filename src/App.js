@@ -50,7 +50,9 @@ const createProductPerStock = (product, stock) => new Array(Number(stock)).fill(
 const App = ({ 
   products,
   addProduct,
-  overWriteProducts 
+  overWriteProducts,
+  deleteProduct,
+  resetProduct
 }) => {
   const [outputMode, setOutputMode] = useState(null);
 
@@ -61,6 +63,8 @@ const App = ({
       onClickPriceTag={() => setOutputMode(OUTPUT_MODE.PRICE_TAG)}
       onClickBarcode={() => setOutputMode(OUTPUT_MODE.BARCODE)}
       onExcelParsed={overWriteProducts}
+      deleteProduct={deleteProduct}
+      onProductReset={resetProduct}
     />
   );
 
