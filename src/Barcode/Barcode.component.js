@@ -31,19 +31,22 @@ const Barcode = ({ product, containerStyle }) => (
       height={25}
       format="CODE128"
       fontSize={10}
+      lineColor="navy"
     />
   </div>
 );
 
 const styles = {
   productTitle: {
+    color: 'navy',
     fontSize: '7pt',
     textTransform: 'uppercase',
     textAlign: 'center',
     maxHeight:  50
   },
   productPrice: {
-    fontSize: '9pt',
+    color: 'navy',
+    fontSize: '10pt',
     fontWeight: 'bold',
     textAlign: 'center'
   }
